@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> sonali </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient( #ee9ca7);
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  overflow: hidden;
+}
+
+.center-box {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  animation: pulse 2s infinite;
+}
+
+.gift {
+  width: 150px;
+}
+
+.click-text {
+  font-size: 1.2em;
+  color: #b0006d;
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+#surprise {
+  margin-top: 100px;
+  animation: fadeIn 2s forwards;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #880e4f;
+}
+
+.note {
+  font-size: 1.5em;
+  color: #6a1b9a;
+}
+
+.photo {
+  width: 200px;
+  border-radius: 15px;
+  margin-top: 20px;
+  box-shadow: 0 0 15px #ffb6c1;
+}
+
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: red;
+  transform: rotate(45deg);
+  animation: floatHearts 5s linear infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+
+.heart::after {
+  left: -10px;
+  top: 0;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.1); }
+}
+
+@keyframes floatHearts {
+  0% {
+    bottom: -10px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    bottom: 100%;
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+  
+  </style>
+ 
+</head>
+<body>
+
+   <div class="center-box" id="box">
+    <img src="WhatsApp Image 2025-06-21 at 22.03.50_72f2615e.jpg  " alt="Gift Box" class="gift">
+    <p class="click-text">अगर आप इस लड़की की HOT तस्वीर दिखाना चाहते हैं तो यहां CLICK  करें       </p>
+  </div>
+
+  <div id="surprise" class="hidden">
+    <h1>💖 You Unlocked My Heart 💖</h1>
+    <p>My love, this is just a little surprise to remind you...</p>
+    <p class="note">You are the best thing that's ever happened to me.</p>
+    <img src="WhatsApp Image 2025-06-21 at 22.03.51_efd5eae0.jpg     " alt="Us" class="photo">
+  </div>
+
+  <div class="hearts" id="hearts"></div>
+
+  <audio id="bg-music" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+
+  <script src="sss.js"></script>
+
+
+</body>
+</html>
